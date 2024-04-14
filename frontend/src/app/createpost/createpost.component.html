@@ -1,0 +1,12 @@
+<mat-card class="dial" style="width: 400px;height: 400px;text-align: center;">
+    <mat-card-title>
+        Create new Post
+    </mat-card-title>
+    <mat-card-content style="margin-top: 150px;">
+        <mat-icon>perm_media</mat-icon>
+        <h1 class="mat-display-1">Drag photos and videos here</h1>
+    </mat-card-content>
+    <mat-card-actions style="padding-left:100px;padding-top: 50px;">
+        <input type="file" mat-raised-button color="secondary" (change)="onFileChanged($event)">
+    </mat-card-actions>
+</mat-card>

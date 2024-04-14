@@ -1,0 +1,58 @@
+<div class="flex flex-wrap justify-center p-9 gap-12">
+  <div class=" sm:w-4/12 px-4 aspect-auto" style="width: 200px;">
+    <img src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-2-800x800.jpg" alt="..."
+      class="shadow rounded-full max-w-full h-auto align-middle border-none" />
+  </div>
+  <div class="">
+    <div class="flex gap-12 ">
+      <h2 style="margin-bottom: 0px;">Praneethhhhhh__</h2>
+      <button>Edit Profile</button>
+      <button><mat-icon>settings</mat-icon></button>
+    </div>
+    <div class="flex gap-9 mt-3">
+      <h3 style="margin-bottom: 0px;">1 post</h3>
+      <button>38 followers</button>
+      <button>219 following</button>
+
+    </div>
+    <div class="flex gap-9 mt-3">
+      <h2 style="margin-bottom: 0px;">Praneeth</h2>
+      <!-- <button>38 followers</button>
+    <button>219 following</button> -->
+
+    </div>
+  </div>
+
+
+
+  <div class=" md:w-2.5/4" style="justify-items: center;padding: auto;;text-align: center;">
+
+    <mat-tab-group animationDuration="0ms" class="">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>apps</mat-icon>Posts
+        </ng-template>
+        <mat-card>
+          <mat-card-content><mat-grid-list cols="3" [gutterSize]="'10px'">
+              <mat-grid-tile *ngFor="let p of posts">
+
+                <img [src]="p.files[0].url" alt="Photo of a Shiba Inu" class="md:w-96" style="cursor: pointer;"
+                  (click)="openPost(p.files[0].url,p.caption,p.likes,p.comment,p.postedTime)">
+
+              </mat-grid-tile>
+            </mat-grid-list></mat-card-content>
+        </mat-card>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>bookmark_border</mat-icon>Saved
+        </ng-template>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>person_outline</mat-icon>Tagged
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

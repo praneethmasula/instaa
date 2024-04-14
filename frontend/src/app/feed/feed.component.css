@@ -1,0 +1,39 @@
+.example-card {
+    max-width: 660px;
+    max-height: 800px;
+   
+    cursor: pointer;
+  }
+
+  .example{
+    width:180px;
+    height:180px;
+  
+  /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
+  }
+
+  .ee{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .log {
+    display: flex;
+    justify-content: center;
+    }
+  
+  .example-header-image {
+     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover; 
+  }
+  .material-icons{
+    border: none;
+  }
+  mat-button{
+    padding: 0px;
+  }
+
+
+  

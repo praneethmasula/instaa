@@ -1,0 +1,22 @@
+.login-form-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+
+  .matInput {
+    transition: none !important;
+    box-shadow: none !important;
+    background-color: white;
+}
+  
+  .button-flex-container {
+    display: flex;
+    width: 100%;
+   
+  }
+  mat-form-field{
+    width: 300px;
+  }

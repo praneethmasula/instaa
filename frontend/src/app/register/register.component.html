@@ -1,0 +1,48 @@
+<form [formGroup]="userform" (ngSubmit)="Login()" class="login-form-flex">
+    <mat-card id="card" style="text-align: center;" class="p-3">
+        <mat-card-title>
+            <h1 style="font-family:cursive;font-size: 40px;">Instagram</h1>
+
+
+        </mat-card-title>
+        <mat-card-subtitle style="width: 300px;">
+            Sign up to see photos and videos from your friends.
+        </mat-card-subtitle>
+        <mat-card-content style="margin-top: 10px;">
+            <mat-form-field appearance="outline">
+                <mat-error *ngIf="userform.get('phooneNumber')?.hasError('minlength')">Please enter a valid
+                    Number</mat-error>
+                <mat-error *ngIf="userform.get('phooneNumber')?.hasError('required')">This field is required</mat-error>
+
+                <input placeholder="Phone number" matInput formControlName="phooneNumber" required>
+
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="outline">
+                <mat-error *ngIf="userform.get('phooneNumber')?.hasError('minlength')">Please enter a valid
+                    Number</mat-error>
+                <mat-error *ngIf="userform.get('phooneNumber')?.hasError('required')">This field is required</mat-error>
+                <input placeholder="Name" matInput formControlName="name">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-error>This field is required.</mat-error>
+                <mat-error *ngIf="already=='yes'">UserName already exists</mat-error>
+                <input placeholder="UserName" matInput formControlName="userName">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-error>This field is required.</mat-error>
+                <input placeholder="password" matInput formControlName="password">
+            </mat-form-field>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" class="button-flex-container" mat-raised-button color="primary">Sign up</button>
+        </mat-card-actions>
+        <mat-card-subtitle class="mt-3">Have an account? <a style="color: blue;cursor: pointer;" routerLink="/login">
+                &nbsp;Login</a></mat-card-subtitle>
+
+    </mat-card>
+</form>
